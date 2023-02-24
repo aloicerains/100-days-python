@@ -1,4 +1,5 @@
 #Password Generator Project
+import json
 from random import randint, choice, shuffle
 
 def pass_gen():
@@ -18,3 +19,18 @@ def pass_gen():
 
     password = "".join(password_list)
     return password
+
+
+def check_website(website):
+    """Function checks if website is already added"""
+    try:
+        with open('data.json', 'r') as file:
+            data = json.load(file)
+
+    except FileNotFoundError:
+        return False
+    else:
+        if website not in data:
+            return False
+        return True
+
