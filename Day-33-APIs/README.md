@@ -1,4 +1,12 @@
 # APIs
+The project highlights API endpoint usage. In the course of the project, we use 
+The sunrise and sunset API together with ISS current location API to send email to ourselves of the 
+passing Iss so we can look up into the sky and observe it.
+
+## Modules
+* smtplib
+* requests
+* datetime
 
 ## Resources
 * [requests module](https://docs.python-requests.org/en/latest/)
